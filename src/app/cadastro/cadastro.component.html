@@ -1,0 +1,33 @@
+<div class="cadastro">
+<form ><app-negrito [Negrito] = texto>Cadastro</app-negrito>
+  <div *ngIf="control == false">
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" class="form-control" id="nome" placeholder="Digite o seu nome">
+    </div>
+    <div class="form-group">
+      <label for="idade">Idade</label>
+      <input type="idade" class="form-control" id="idade" placeholder="Digite o sua idade">
+      
+    </div>
+  </div>
+<!------------------------------------------------------------------------------------------------------------------->
+  <div *ngIf="control == true">
+    <div class="form-group">
+      <label for="nome">Email:</label>
+      <input type="text" class="form-control"  placeholder="email@email.com">
+    </div>
+    <div class="form-group">
+      <label for="idade">senha</label>
+      <input type="password" class="form-control"  placeholder="Senha">
+    </div>
+  </div>
+   
+   <!--  <button type="submit" class="btn btn-primary" style="margin-top: 20px; margin-right: 5px;" action="entrar">Cadastrar</button> -->
+  
+    <button  type="button" class="btn btn-primary" style="margin-top: 20px;"  (click)="login()">{{nameButton}}</button>
+    <button  type="submit" class="btn btn-primary" style="margin-top: 20px; margin-left: 5px;">Enviar</button>
+    
+  </form>
+  
+</div>

@@ -1,0 +1,21 @@
+<h1 class="titulo">
+    <app-negrito [Negrito]=texto></app-negrito>
+</h1>
+
+<div class="conteiner">
+    <p><strong>Nome: </strong> {{usuario.nome}} {{usuario.idade}} </p>
+
+    <div *ngFor="let i of usuarioCaixa" class="historico">
+        <hr>
+        <p><strong>Nome: </strong>{{i.nome}}</p>
+        <p><strong>Idade: </strong>{{i.idade}}</p>
+        <br>
+        <hr>
+    </div>
+</div>
+<h3>somente acima de 21: </h3>
+<div *ngFor="let i of usuarioCaixa" class="historico">    
+    
+    <div *ngIf="i.idade >=22"><app-negrito [Negrito]=texto></app-negrito>: {{i.nome}} {{i.idade}}</div>
+    
+</div>
